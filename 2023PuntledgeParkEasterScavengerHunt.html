@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>Cognrats!</h1>
+<h2>You found Clue #71 to the Puntledge Park Scavenger Hunt</h2>
+<br>
+<br>
+<br>
+<label for="number-input">Enter a number:</label>
+<input type="number" id="number-input" min="100" max="999">
+<p id="output"></p>
+
+<script type="text/javascript">
+const input = document.getElementById('number-input');
+const output = document.getElementById('output');
+
+  input.addEventListener('input', () => {
+    const value = input.value;
+    if (value > 0) {
+      // Display a new word based on the input value
+      if (value == 4210) {
+        output.textContent = 'SHOWPICTURE';
+      } else {
+        output.textContent = 'Try Again';
+      }
+    } else {
+      output.textContent = 'Invalid input';
+    }
+  });
+</script>
+
+</body>
+</html>
